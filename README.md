@@ -7,10 +7,10 @@ JUST REMINDER, IF I FORGOT
 CREATE TABLE cuti_new_request LIKE cuti_new;
 ```
 
-```sql
-### MOVE FROM CUTI REQUEST TO CUTI REAL
-INSERT INTO cuti_new SELECT * FROM cuti_new_request WHERE id_cuti='$id_cuti';
 
+### MOVE FROM CUTI REQUEST TO CUTI REAL
+```sql
+INSERT INTO cuti_new SELECT * FROM cuti_new_request WHERE id_cuti='$id_cuti';
 ```
 
 ### DELETE DATA ON CUTI REQUEST IF ALL ACC DONE
